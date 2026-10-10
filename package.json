@@ -1,0 +1,31 @@
+{
+  "name": "flowmaster",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "test": "jest --runInBand",
+    "start:orchestrator": "node services/orchestrator/src/server.js",
+    "start:verification": "node services/verification/src/server.js",
+    "start:credit": "node services/credit/src/server.js",
+    "lint": "node --check services/orchestrator/src/server.js && node --check services/verification/src/server.js && node --check services/credit/src/server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "joi": "^17.6.0",
+    "kafkajs": "^2.2.2",
+    "pg": "^8.16.0",
+    "pino": "^9.0.0",
+    "pino-pretty": "^11.0.0",
+    "prom-client": "^15.1.3",
+    "redis": "^4.6.0",
+    "yaml": "^2.6.0",
+    "@opentelemetry/api": "^1.9.0",
+    "@opentelemetry/sdk-node": "^0.56.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
+  }
+}
